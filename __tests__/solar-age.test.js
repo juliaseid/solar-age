@@ -33,19 +33,18 @@ describe ("UserOnEarth", () => {
 
 describe ("Planet", () => {
   var planetZ;
-  var user;
+  var user = new UserOnEarth("12/01/1982")
 
   beforeEach(() => {
     planetZ = new Planets (10, user);
-    user = planetZ.addUser("12/01/1982");
   });
 
   test ('should convert user age into planetZ years', () => {
-    expect (planetZ.convertAge()).toEqual(3.7);
+    expect (planetZ.convertAge(user)).toEqual(3.7);
   });
 
   test ('should convert user life expectancy into planetZ years', () => {
-    expect (planetZ.convertLifeExpectancy()).toEqual(4.5661);
+    expect (planetZ.convertLifeExpectancy(user)).toEqual(4.5661);
   });
 
 });

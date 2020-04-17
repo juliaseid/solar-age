@@ -68,51 +68,48 @@ export class UserOnEarth {
 };
 
 export class Planets {
-  constructor (yearLength, user) {
+  constructor (yearLength) {
     this.yearLength=yearLength;
-    this.user = user;
   };
 
-addUser (birthday) {
-  this.user = new UserOnEarth (birthday);
-  return this.user;
-}  
-convertAge () {
-  let ageOnPlanet = this.user.toEarthYears()/this.yearLength;
+convertAge (user) {
+  let ageOnPlanet = user.toEarthYears()/this.yearLength;
   return ageOnPlanet; 
 }
 
-convertLifeExpectancy () {
-  let lifeExpectancyOnPlanet = this.user.lifeExpectancy()/this.yearLength;
+convertLifeExpectancy (user) {
+  let lifeExpectancyOnPlanet = user.lifeExpectancy()/this.yearLength;
   return lifeExpectancyOnPlanet.toFixed(4);
 }
 
 };
 
-class Mercury extends Planets {
+export class Mercury extends Planets {
+  constructor(user) {
+    super(user, .24);
+  };
+};
+
+export class Venus extends Planets {
 
 };
 
-class Venus extends Planets {
+export class Mars extends Planets {
 
 };
 
-class Mars extends Planets {
+export class Jupiter extends Planets {
 
 };
 
-class Jupiter extends Planets {
+export class Saturn extends Planets {
 
 };
 
-class Saturn extends Planets {
+export class Uranus extends Planets {
 
 };
 
-class Uranus extends Planets {
-
-};
-
-class Neptune extends Planets {
+export class Neptune extends Planets {
 
 };
