@@ -1,5 +1,12 @@
 import { UserOnEarth } from "./../src/solar-age.js";
 import { Planets } from "./../src/solar-age.js";
+import { Mercury } from "./../src/solar-age.js";
+import { Venus } from "./../src/solar-age.js";
+import { Mars } from "./../src/solar-age.js";
+import { Jupiter } from "./../src/solar-age.js";
+import { Saturn } from "./../src/solar-age.js";
+import { Uranus } from "./../src/solar-age.js";
+import { Neptune } from "./../src/solar-age.js";
 
 describe ("UserOnEarth", () => {
 
@@ -33,18 +40,31 @@ describe ("UserOnEarth", () => {
 
 describe ("Planet", () => {
   var planetZ;
-  var user = new UserOnEarth("12/01/1982")
+  var user = new UserOnEarth("12/01/1982");
 
   beforeEach(() => {
     planetZ = new Planets (10, user);
   });
 
   test ('should convert user age into planetZ years', () => {
-    expect (planetZ.convertAge(user)).toEqual(3.7);
+    expect (planetZ.convertAge(user)).toEqual("3.70");
   });
 
   test ('should convert user life expectancy into planetZ years', () => {
-    expect (planetZ.convertLifeExpectancy(user)).toEqual(4.5661);
+    expect (planetZ.convertLifeExpectancy(user)).toEqual("4.57");
+  });
+
+});
+
+describe ("Mercury", () => {
+  var user = new UserOnEarth("12/01/1982");
+  var planetM = new Mercury;
+
+  test ('should convert user age into Mercury years', () => {
+    expect (planetM.convertAge(user)).toEqual("154.17");
+  });
+  test ('should convert user life expectancy into Mercury years', () => {
+    expect (planetM.convertLifeExpectancy(user)).toEqual("190.25");
   });
 
 });

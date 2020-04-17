@@ -74,42 +74,54 @@ export class Planets {
 
 convertAge (user) {
   let ageOnPlanet = user.toEarthYears()/this.yearLength;
-  return ageOnPlanet; 
+  return ageOnPlanet.toFixed(2); 
 }
 
 convertLifeExpectancy (user) {
   let lifeExpectancyOnPlanet = user.lifeExpectancy()/this.yearLength;
-  return lifeExpectancyOnPlanet.toFixed(4);
+  return lifeExpectancyOnPlanet.toFixed(2);
 }
 
 };
 
 export class Mercury extends Planets {
-  constructor(user) {
-    super(user, .24);
+  constructor (user) {
+    super (.24, user);
   };
 };
 
 export class Venus extends Planets {
-
+  constructor (user) {
+    super (.62, user);
+  };
 };
 
 export class Mars extends Planets {
-
+  constructor (user) {
+    super (1.88, user);
+  };
 };
 
 export class Jupiter extends Planets {
-
+  constructor (user) {
+    super (11.86, user);
+  };
 };
 
 export class Saturn extends Planets {
-
+  constructor (user) {
+    super (29.53, user);
+  };
 };
 
 export class Uranus extends Planets {
-
+  constructor (user) {
+    super (84.13, user);
+  };
 };
 
 export class Neptune extends Planets {
-
+  constructor (user) {
+    super (165.02, user);
+  };
 };
