@@ -1,4 +1,5 @@
 import { UserOnEarth } from "./../src/solar-age.js";
+import { Planets } from "./../src/solar-age.js";
 
 describe ("UserOnEarth", () => {
 

@@ -16,7 +16,8 @@ export class UserOnEarth {
   };
 
   toEarthYears () {
-    let ageInEarthYears = Math.floor(Math.abs((this.agerator())/(364.25)));
+    const yearInDays = 364.75;
+    let ageInEarthYears = Math.floor(Math.abs((this.agerator())/yearInDays));
     return ageInEarthYears;
   };
 
@@ -63,5 +64,41 @@ export class UserOnEarth {
     }
   return lifeExpectancy; 
   };
+
+};
+
+export class Planets {
+  constructor (yearLength) {
+    this.yearLength=yearLength;
+  };
+
+
+};
+
+class Mercury extends Planets {
+
+};
+
+class Venus extends Planets {
+
+};
+
+class Mars extends Planets {
+
+};
+
+class Jupiter extends Planets {
+
+};
+
+class Saturn extends Planets {
+
+};
+
+class Uranus extends Planets {
+
+};
+
+class Neptune extends Planets {
 
 };
