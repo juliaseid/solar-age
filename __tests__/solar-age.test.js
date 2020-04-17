@@ -18,7 +18,11 @@ describe ("UserOnEarth", () => {
 
   test ('should take difference between today and birthdate and report in days', () => {
     expect (user.agerator()).toEqual(13652);
-    
   });
+
+  test ('should take age in days and convert to years', () => {
+    expect (user.toEarthYears()).toEqual(37);
+  })
+
 
 });
