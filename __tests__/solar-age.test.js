@@ -53,18 +53,95 @@ describe ("Planet", () => {
   test ('should convert user life expectancy into planetZ years', () => {
     expect (planetZ.convertLifeExpectancy(user)).toEqual("4.57");
   });
-
 });
 
 describe ("Mercury", () => {
   var user = new UserOnEarth("12/01/1982");
-  var planetM = new Mercury;
+  var planetZ = new Mercury;
 
   test ('should convert user age into Mercury years', () => {
-    expect (planetM.convertAge(user)).toEqual("154.17");
-  });
-  test ('should convert user life expectancy into Mercury years', () => {
-    expect (planetM.convertLifeExpectancy(user)).toEqual("190.25");
+    expect (planetZ.convertAge(user)).toEqual("154.17");
   });
 
+  test ('should convert user life expectancy into Mercury years', () => {
+    expect (planetZ.convertLifeExpectancy(user)).toEqual("190.25");
+  });
+});
+
+describe ("Venus", () => {
+  var user = new UserOnEarth("12/01/1982");
+  var planetZ = new Venus;
+
+  test ('should convert user age into Venus years', () => {
+    expect (planetZ.convertAge(user)).toEqual("59.68");
+  });
+  
+  test ('should convert user life expectancy into Venus years', () => {
+    expect (planetZ.convertLifeExpectancy(user)).toEqual("73.65");
+  });
+});
+
+describe ("Mars", () => {
+  var user = new UserOnEarth("12/01/1982");
+  var planetZ = new Mars;
+
+  test ('should convert user age into Mars years', () => {
+    expect (planetZ.convertAge(user)).toEqual("19.68");
+  });
+  
+  test ('should convert user life expectancy into Mars years', () => {
+    expect (planetZ.convertLifeExpectancy(user)).toEqual("24.29");
+  });
+});
+
+describe ("Jupiter", () => {
+  var user = new UserOnEarth("12/01/1982");
+  var planetZ = new Jupiter;
+
+  test ('should convert user age into Jupiter years', () => {
+    expect (planetZ.convertAge(user)).toEqual("3.12");
+  });
+  
+  test ('should convert user life expectancy into Jupiter years', () => {
+    expect (planetZ.convertLifeExpectancy(user)).toEqual("3.85");
+  });
+});
+
+describe ("Saturn", () => {
+  var user = new UserOnEarth("12/01/1982");
+  var planetZ = new Saturn;
+
+  test ('should convert user age into Saturn years', () => {
+    expect (planetZ.convertAge(user)).toEqual("1.25");
+  });
+  
+  test ('should convert user life expectancy into Saturn years', () => {
+    expect (planetZ.convertLifeExpectancy(user)).toEqual("1.55");
+  });
+});
+
+describe ("Uranus", () => {
+  var user = new UserOnEarth("12/01/1982");
+  var planetZ = new Uranus;
+
+  test ('should convert user age into Uranus years', () => {
+    expect (planetZ.convertAge(user)).toEqual("0.44");
+  });
+  
+  test ('should convert user life expectancy into Uranus years', () => {
+    expect (planetZ.convertLifeExpectancy(user)).toEqual("0.54");
+  });
+});
+
+describe ("Neptune", () => {
+  var user = new UserOnEarth("12/01/1982");
+  var planetZ = new Neptune;
+
+  test ('should convert user age into Neptune years', () => {
+    expect (planetZ.convertAge(user)).toEqual("0.22");
+  });
+  
+  test ('should convert user life expectancy into Neptune years', () => {
+    expect (planetZ.convertLifeExpectancy(user)).toEqual("0.28");
+  });
 });
