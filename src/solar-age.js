@@ -72,12 +72,19 @@ export class Planets {
     this.yearLength=yearLength;
     this.user = user;
   };
-convertAge () {
 
+addUser (birthday) {
+  this.user = new UserOnEarth (birthday);
+  return this.user;
+}  
+convertAge () {
+  let ageOnPlanet = this.user.toEarthYears()/this.yearLength;
+  return ageOnPlanet; 
 }
 
 convertLifeExpectancy () {
-
+  let lifeExpectancyOnPlanet = this.user.lifeExpectancy()/this.yearLength;
+  return lifeExpectancyOnPlanet.toFixed(4);
 }
 
 };

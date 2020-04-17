@@ -37,7 +37,7 @@ describe ("Planet", () => {
 
   beforeEach(() => {
     planetZ = new Planets (10, user);
-    user = new UserOnEarth("12/01/1982");
+    user = planetZ.addUser("12/01/1982");
   });
 
   test ('should convert user age into planetZ years', () => {
