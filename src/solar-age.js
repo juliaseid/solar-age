@@ -20,4 +20,8 @@ export class UserOnEarth {
     return ageInEarthYears;
   };
 
+  lifeExpectancy () {
+    
+  }
+
 };

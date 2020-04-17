@@ -24,5 +24,8 @@ describe ("UserOnEarth", () => {
     expect (user.toEarthYears()).toEqual(37);
   })
 
+  test ('should produce appropriate "remaining years of life" for user', () => {
+    expect (user.lifeExpectancy()).toEqual(45.661)
+  })
 
 });
