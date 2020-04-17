@@ -17,7 +17,7 @@ export class UserOnEarth {
 
   toEarthYears () {
     const yearInDays = 364.75;
-    let ageInEarthYears = Math.floor(Math.abs((this.agerator())/yearInDays));
+    let ageInEarthYears = ((this.agerator())/yearInDays).toPrecision(2);
     return ageInEarthYears;
   };
 
@@ -74,12 +74,12 @@ export class Planets {
 
 convertAge (user) {
   let ageOnPlanet = user.toEarthYears()/this.yearLength;
-  return ageOnPlanet.toFixed(2); 
+  return ageOnPlanet.toPrecision(2); 
 }
 
 convertLifeExpectancy (user) {
   let lifeExpectancyOnPlanet = user.lifeExpectancy()/this.yearLength;
-  return lifeExpectancyOnPlanet.toFixed(2);
+  return lifeExpectancyOnPlanet.toPrecision(2);
 }
 
 };
