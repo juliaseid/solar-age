@@ -29,7 +29,7 @@ describe ("UserOnEarth", () => {
   });
 
   test ('should take age in days and convert to years', () => {
-    expect (user.toEarthYears()).toEqual(37);
+    expect (user.toEarthYears()).toEqual(37.43);
   })
 
   test ('should produce appropriate "remaining years of life" for user', () => {
@@ -47,11 +47,11 @@ describe ("Planet", () => {
   });
 
   test ('should convert user age into planetZ years', () => {
-    expect (planetZ.convertAge(user)).toEqual("3.70");
+    expect (planetZ.convertAge(user)).toEqual(3.74);
   });
 
   test ('should convert user life expectancy into planetZ years', () => {
-    expect (planetZ.convertLifeExpectancy(user)).toEqual("4.57");
+    expect (planetZ.convertLifeExpectancy(user)).toEqual(4.57);
   });
 });
 
@@ -60,11 +60,11 @@ describe ("Mercury", () => {
   var planetZ = new Mercury;
 
   test ('should convert user age into Mercury years', () => {
-    expect (planetZ.convertAge(user)).toEqual("154.17");
+    expect (planetZ.convertAge(user)).toEqual(155.96);
   });
 
   test ('should convert user life expectancy into Mercury years', () => {
-    expect (planetZ.convertLifeExpectancy(user)).toEqual("190.25");
+    expect (planetZ.convertLifeExpectancy(user)).toEqual(190.25);
   });
 });
 
@@ -73,11 +73,11 @@ describe ("Venus", () => {
   var planetZ = new Venus;
 
   test ('should convert user age into Venus years', () => {
-    expect (planetZ.convertAge(user)).toEqual("59.68");
+    expect (planetZ.convertAge(user)).toEqual(60.37);
   });
   
   test ('should convert user life expectancy into Venus years', () => {
-    expect (planetZ.convertLifeExpectancy(user)).toEqual("73.65");
+    expect (planetZ.convertLifeExpectancy(user)).toEqual(73.65);
   });
 });
 
@@ -86,11 +86,11 @@ describe ("Mars", () => {
   var planetZ = new Mars;
 
   test ('should convert user age into Mars years', () => {
-    expect (planetZ.convertAge(user)).toEqual("19.68");
+    expect (planetZ.convertAge(user)).toEqual(19.91);
   });
   
   test ('should convert user life expectancy into Mars years', () => {
-    expect (planetZ.convertLifeExpectancy(user)).toEqual("24.29");
+    expect (planetZ.convertLifeExpectancy(user)).toEqual(24.29);
   });
 });
 
@@ -99,11 +99,11 @@ describe ("Jupiter", () => {
   var planetZ = new Jupiter;
 
   test ('should convert user age into Jupiter years', () => {
-    expect (planetZ.convertAge(user)).toEqual("3.12");
+    expect (planetZ.convertAge(user)).toEqual(3.16);
   });
   
   test ('should convert user life expectancy into Jupiter years', () => {
-    expect (planetZ.convertLifeExpectancy(user)).toEqual("3.85");
+    expect (planetZ.convertLifeExpectancy(user)).toEqual(3.85);
   });
 });
 
@@ -112,11 +112,11 @@ describe ("Saturn", () => {
   var planetZ = new Saturn;
 
   test ('should convert user age into Saturn years', () => {
-    expect (planetZ.convertAge(user)).toEqual("1.25");
+    expect (planetZ.convertAge(user)).toEqual(1.27);
   });
   
   test ('should convert user life expectancy into Saturn years', () => {
-    expect (planetZ.convertLifeExpectancy(user)).toEqual("1.55");
+    expect (planetZ.convertLifeExpectancy(user)).toEqual(1.55);
   });
 });
 
@@ -125,11 +125,11 @@ describe ("Uranus", () => {
   var planetZ = new Uranus;
 
   test ('should convert user age into Uranus years', () => {
-    expect (planetZ.convertAge(user)).toEqual("0.44");
+    expect (planetZ.convertAge(user)).toEqual(0.44);
   });
   
   test ('should convert user life expectancy into Uranus years', () => {
-    expect (planetZ.convertLifeExpectancy(user)).toEqual("0.54");
+    expect (planetZ.convertLifeExpectancy(user)).toEqual(0.54);
   });
 });
 
@@ -138,10 +138,10 @@ describe ("Neptune", () => {
   var planetZ = new Neptune;
 
   test ('should convert user age into Neptune years', () => {
-    expect (planetZ.convertAge(user)).toEqual("0.22");
+    expect (planetZ.convertAge(user)).toEqual(0.23);
   });
   
   test ('should convert user life expectancy into Neptune years', () => {
-    expect (planetZ.convertLifeExpectancy(user)).toEqual("0.28");
+    expect (planetZ.convertLifeExpectancy(user)).toEqual(0.28);
   });
 });
