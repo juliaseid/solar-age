@@ -26,7 +26,26 @@ describe ("UserOnEarth", () => {
   })
 
   test ('should produce appropriate "remaining years of life" for user', () => {
-    expect (user.lifeExpectancy()).toEqual(45.661)
-  })
+    expect (user.lifeExpectancy()).toEqual(45.661);
+  });
+
+});
+
+describe ("Planet", () => {
+  var planetZ;
+  var user;
+
+  beforeEach(() => {
+    planetZ = new Planets (10, user);
+    user = new UserOnEarth("12/01/1982");
+  });
+
+  test ('should convert user age into planetZ years', () => {
+    expect (planetZ.convertAge()).toEqual(3.7);
+  });
+
+  test ('should convert user life expectancy into planetZ years', () => {
+    expect (planetZ.convertLifeExpectancy()).toEqual(4.5661);
+  });
 
 });

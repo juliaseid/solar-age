@@ -68,10 +68,17 @@ export class UserOnEarth {
 };
 
 export class Planets {
-  constructor (yearLength) {
+  constructor (yearLength, user) {
     this.yearLength=yearLength;
+    this.user = user;
   };
+convertAge () {
 
+}
+
+convertLifeExpectancy () {
+
+}
 
 };
 
