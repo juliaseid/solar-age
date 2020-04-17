@@ -15,4 +15,9 @@ export class UserOnEarth {
     return ageInDays;
   };
 
+  toEarthYears () {
+    let ageInEarthYears = Math.floor(Math.abs((this.agerator())/(364.25)));
+    return ageInEarthYears;
+  };
+
 };
