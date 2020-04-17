@@ -13,9 +13,12 @@ describe ("UserOnEarth", () => {
   });
 
   test ('should transform user-inputted birthday into milliseconds since 1/1/1970', () => {
-    expect (user.dateifier()).toEqual(407577600000)
+    expect (user.dateifier()).toEqual(407577600000);
   });
 
-
+  test ('should take difference between today and birthdate and report in days', () => {
+    expect (user.agerator()).toEqual(13652);
+    
+  });
 
 });
