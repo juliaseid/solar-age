@@ -10,7 +10,7 @@ import { Neptune } from "./../src/solar-age.js";
 
 describe ("UserOnEarth", () => {
 
-  var user;
+  let user;
 
   beforeEach(() => {
     user = new UserOnEarth("12/01/1982");
@@ -39,8 +39,8 @@ describe ("UserOnEarth", () => {
 });
 
 describe ("Planet", () => {
-  var planetZ;
-  var user = new UserOnEarth("12/01/1982");
+  let planetZ;
+  let user = new UserOnEarth("12/01/1982");
 
   beforeEach(() => {
     planetZ = new Planets (10, user);
@@ -56,8 +56,8 @@ describe ("Planet", () => {
 });
 
 describe ("Mercury", () => {
-  var user = new UserOnEarth("12/01/1982");
-  var planetZ = new Mercury;
+  let user = new UserOnEarth("12/01/1982");
+  let planetZ = new Mercury;
 
   test ('should convert user age into Mercury years', () => {
     expect (planetZ.convertAge(user)).toEqual(155.96);
@@ -69,8 +69,8 @@ describe ("Mercury", () => {
 });
 
 describe ("Venus", () => {
-  var user = new UserOnEarth("12/01/1982");
-  var planetZ = new Venus;
+  let user = new UserOnEarth("12/01/1982");
+  let planetZ = new Venus;
 
   test ('should convert user age into Venus years', () => {
     expect (planetZ.convertAge(user)).toEqual(60.37);
@@ -82,8 +82,8 @@ describe ("Venus", () => {
 });
 
 describe ("Mars", () => {
-  var user = new UserOnEarth("12/01/1982");
-  var planetZ = new Mars;
+  let user = new UserOnEarth("12/01/1982");
+  let planetZ = new Mars;
 
   test ('should convert user age into Mars years', () => {
     expect (planetZ.convertAge(user)).toEqual(19.91);
@@ -95,8 +95,8 @@ describe ("Mars", () => {
 });
 
 describe ("Jupiter", () => {
-  var user = new UserOnEarth("12/01/1982");
-  var planetZ = new Jupiter;
+  let user = new UserOnEarth("12/01/1982");
+  let planetZ = new Jupiter;
 
   test ('should convert user age into Jupiter years', () => {
     expect (planetZ.convertAge(user)).toEqual(3.16);
@@ -108,8 +108,8 @@ describe ("Jupiter", () => {
 });
 
 describe ("Saturn", () => {
-  var user = new UserOnEarth("12/01/1982");
-  var planetZ = new Saturn;
+  let user = new UserOnEarth("12/01/1982");
+  let planetZ = new Saturn;
 
   test ('should convert user age into Saturn years', () => {
     expect (planetZ.convertAge(user)).toEqual(1.27);
@@ -121,8 +121,8 @@ describe ("Saturn", () => {
 });
 
 describe ("Uranus", () => {
-  var user = new UserOnEarth("12/01/1982");
-  var planetZ = new Uranus;
+  let user = new UserOnEarth("12/01/1982");
+  let planetZ = new Uranus;
 
   test ('should convert user age into Uranus years', () => {
     expect (planetZ.convertAge(user)).toEqual(0.44);
@@ -134,8 +134,8 @@ describe ("Uranus", () => {
 });
 
 describe ("Neptune", () => {
-  var user = new UserOnEarth("12/01/1982");
-  var planetZ = new Neptune;
+  let user = new UserOnEarth("12/01/1982");
+  let planetZ = new Neptune;
 
   test ('should convert user age into Neptune years', () => {
     expect (planetZ.convertAge(user)).toEqual(0.23);
